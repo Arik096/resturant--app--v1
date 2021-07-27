@@ -19,4 +19,4 @@ use App\Http\Controllers\Restrurent\RestrurentController;
 // });
 
 
-Route::get('/', [RestrurentController::class, 'index']);
+Route::get('/', [RestrurentController::class, 'index'])->name('RestrurentList');
