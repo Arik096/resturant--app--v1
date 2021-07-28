@@ -14,9 +14,7 @@ use App\Http\Controllers\Restrurent\RestrurentController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::view('/', 'welcome')->name('LandingPage');
 
 
-Route::get('/', [RestrurentController::class, 'index'])->name('RestrurentList');
+Route::get('/resList', [RestrurentController::class, 'index'])->name('RestrurentList');
