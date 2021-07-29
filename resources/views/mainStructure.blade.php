@@ -17,6 +17,19 @@
             text-decoration: none !important;
         }
 
+        .nav-item{
+            border: 2px solid teal;
+            border-radius: 10px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .nav-item:hover{
+            border: 5px solid red;
+            color: whitesmoke !important;
+            background-color: rgb(114, 207, 207);
+        }
+
     </style>
 </head>
 
