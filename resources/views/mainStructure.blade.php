@@ -11,6 +11,13 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Restrurent</title>
+    <style>
+        .text-muted a {
+            color: black !important;
+            text-decoration: none !important;
+        }
+
+    </style>
 </head>
 
 <body>
