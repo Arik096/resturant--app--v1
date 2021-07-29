@@ -40,7 +40,9 @@
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="{{ route('LandingPage') }}">Restro</a>
+                        <a class="navbar-brand" href="{{ route('LandingPage') }}">
+                        <img src="{{asset('img/1-removebg-preview.png')}}" alt="arik" style="width: 150px;">
+                        </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
