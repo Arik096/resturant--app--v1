@@ -22,3 +22,4 @@ Route::get('/addRes', [RestrurentController::class, 'createPage'])->name('AddRes
 Route::post('/resList', [RestrurentController::class, 'create'])->name('AddRestrurent');
 Route::get('/upRes/{id}', [RestrurentController::class, 'updatePage'])->name('UpRestrurentPage');
 Route::post('/resList', [RestrurentController::class, 'update'])->name('UpRestrurent');
+Route::get('/resList/{id}', [RestrurentController::class, 'destroy'])->name('DeRestrurent');
