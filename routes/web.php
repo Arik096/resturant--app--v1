@@ -20,3 +20,5 @@ Route::view('/', 'welcome')->name('LandingPage');
 Route::get('/resList', [RestrurentController::class, 'index'])->name('RestrurentList');
 Route::get('/addRes', [RestrurentController::class, 'createPage'])->name('AddRestrurentPage');
 Route::post('/resList', [RestrurentController::class, 'create'])->name('AddRestrurent');
+Route::get('/upRes/{id}', [RestrurentController::class, 'updatePage'])->name('UpRestrurentPage');
+Route::post('/resList', [RestrurentController::class, 'update'])->name('UpRestrurent');
