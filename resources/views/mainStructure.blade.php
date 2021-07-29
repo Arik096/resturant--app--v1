@@ -34,7 +34,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page"
-                                        href="{{ route('RestrurentList') }}">All Restrurents</a>
+                                        href="{{ route('AddRestrurentPage') }}">New Restrurent</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page"
