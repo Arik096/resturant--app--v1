@@ -30,8 +30,8 @@ class RestrurentController extends Controller
         $request->validate([
             'name' => 'required|max:20',
             'phone' => 'required|min:11',
-            'address'=> 'required',
-            'manager_id'=> 'required|numeric'
+            'address' => 'required',
+            'manager_id' => 'required|numeric'
         ]);
 
         DB::table('restrurents')->insert([
@@ -40,8 +40,36 @@ class RestrurentController extends Controller
             'address' => $request->address,
             'manager_id' => $request->manager_id,
         ]);
-        Session()->flash('sms','Restrurent Added');
+        Session()->flash('sms', 'Restrurent Added');
         return redirect(route('RestrurentList'));
     }
 
+    public function updatePage($id)
+    {
+        $restrurent = DB::table('restrurents')
+            ->where('id', $id)
+            ->get();
+        return view('restrurent.editRestrurent', ['restrurent' => $restrurent]);
+    }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|max:20',
+            'phone' => 'required|min:11',
+            'address' => 'required',
+            'manager_id' => 'required|numeric'
+        ]);
+
+        DB::table('restrurents')
+            ->where('id', $request->id)
+            ->update([
+                'name' => $request->name,
+                'phone' => $request->phone,
+                'address' => $request->address,
+                'manager_id' => $request->manager_id,
+            ]);
+        Session()->flash('sms', 'Restrurent Update');
+        return redirect(route('RestrurentList'));
+    }
 }
