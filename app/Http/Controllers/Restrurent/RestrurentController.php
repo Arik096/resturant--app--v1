@@ -72,4 +72,15 @@ class RestrurentController extends Controller
         Session()->flash('sms', 'Restrurent Update');
         return redirect(route('RestrurentList'));
     }
+
+    public function destroy($id)
+    {
+
+        DB::table('restrurents')
+            ->where('id', $id)
+            ->delete();
+
+        Session()->flash('sms', 'Restrurent Deleted');
+        return redirect(route('RestrurentList'));
+    }
 }
