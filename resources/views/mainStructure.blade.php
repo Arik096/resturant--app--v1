@@ -12,19 +12,23 @@
 
     <title>Restrurent</title>
     <style>
+        .col-md-12 {
+            width: -webkit-fill-available !important;
+        }
+
         .text-muted a {
             color: black !important;
             text-decoration: none !important;
         }
 
-        .nav-item{
+        .nav-item {
             border: 2px solid teal;
             border-radius: 10px;
             font-size: 20px;
             margin: 10px;
         }
 
-        .nav-item:hover{
+        .nav-item:hover {
             border: 5px solid red;
             color: whitesmoke !important;
             background-color: rgb(114, 207, 207);
@@ -35,13 +39,13 @@
 
 <body>
     {{-- <div class="continer" style="display: flex; place-content:center"> --}}
-    <div class="continer">
+    <div class="continer col-md-12">
         <div class="row col-md-12">
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="{{ route('LandingPage') }}">
-                        <img src="{{asset('img/1-removebg-preview.png')}}" alt="arik" style="width: 150px;">
+                            <img src="{{ asset('img/1-removebg-preview.png') }}" alt="arik" style="width: 150px;">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
